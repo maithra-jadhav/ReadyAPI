@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/work-orders/cancellation-requests/{WorkOrderId}" path="/work-orders/cancellation-requests/{WorkOrderId}" id="65e09a8b-5272-4eaa-bd9d-f1ea9ec55108" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="65e09a8b-5272-4eaa-bd9d-f1ea9ec55108fileName">%2Fwork-orders%2Fcancellation-requests%2F%7BWorkOrderId%7D</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>WorkOrderId</con:name>
+      <con:style>TEMPLATE</con:style>
+      <con:description>ID of the work-order to be updated</con:description>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="/work-orders/cancellation-requests/{WorkOrderId}" id="0e533a57-540c-45eb-b3ec-b6b05daf237b" method="PUT">
+    <con:description/>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>503</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="df68f580-e306-4592-a357-2f1cb9f4c3c5" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://deng-vordel01.hnz.co.nz:22100</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

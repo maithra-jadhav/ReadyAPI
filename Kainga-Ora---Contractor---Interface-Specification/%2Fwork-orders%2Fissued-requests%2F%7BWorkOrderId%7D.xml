@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/work-orders/issued-requests/{WorkOrderId}" path="/work-orders/issued-requests/{WorkOrderId}" id="90ea0eb9-1b16-4519-a559-852f97090788" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="90ea0eb9-1b16-4519-a559-852f97090788fileName">%2Fwork-orders%2Fissued-requests%2F%7BWorkOrderId%7D</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>WorkOrderId</con:name>
+      <con:style>TEMPLATE</con:style>
+      <con:description>ID of the work-order to be updated</con:description>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="/work-orders/issued-requests/{WorkOrderId}" id="351e1811-5521-4b54-bdd1-c0b00cc0cee0" method="PUT">
+    <con:description/>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>503</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="05549ed0-fa09-481f-9e32-6e95627ef7a6" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://deng-vordel01.hnz.co.nz:22100</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

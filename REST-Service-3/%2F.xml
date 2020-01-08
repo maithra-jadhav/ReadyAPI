@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/" path="/" id="7c897839-f2de-49d6-a864-1c7068b01ca1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7c897839-f2de-49d6-a864-1c7068b01ca1fileName">%2F</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="PUT" id="d541b4d9-54ee-4a9f-9d31-4210bc5fd572" method="PUT">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="PUT Request" id="d4f6f981-57c5-490a-9716-45b80477752c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://osb</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/properties/{PropertyId}" path="/properties/{PropertyId}" id="03a16dc7-1ecc-4ed7-ae70-97806d4eff9d" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="03a16dc7-1ecc-4ed7-ae70-97806d4eff9dfileName">%2Fproperties%2F%7BPropertyId%7D</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>PropertyId</con:name>
+      <con:style>TEMPLATE</con:style>
+      <con:description>Identifies a property</con:description>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="/properties/{PropertyId}" id="ab12ebd1-e445-4bfc-ab8d-f96fbf813596" method="PUT">
+    <con:description/>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>503</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="82e7b3eb-eb04-4c28-80a2-a2927ba09b6b" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://deng-vordel01.hnz.co.nz:22100</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/work-orders/follow-ons" path="/work-orders/follow-ons{WorkOrderId}" id="6fa8318b-7ac7-4f3d-9ad4-6ef4baaf2736" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6fa8318b-7ac7-4f3d-9ad4-6ef4baaf2736fileName">%2Fwork-orders%2Ffollow-ons</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>WorkOrderId</con:name>
+      <con:style>TEMPLATE</con:style>
+      <con:description>ID of the work-order to be updated</con:description>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="/work-orders/follow-ons" id="38476daa-fcb5-44c6-aac8-3f19693185b6" method="POST">
+    <con:description/>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>503</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="777bfc78-a360-4014-a945-344224a51c5b" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://deng-vordel01.hnz.co.nz:22100</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

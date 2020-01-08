@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/assets/ContractorB2BWorkOrderInboundRS/workorder" path="/assets/ContractorB2BWorkOrderInboundRS/workorder" id="6fe4fea5-aab4-4fe5-897d-bb784d485417" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6fe4fea5-aab4-4fe5-897d-bb784d485417fileName">%2Fassets%2FContractorB2BWorkOrderInboundRS%2Fworkorder</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="PUT" id="b9a8582a-43c2-4d52-b9c6-b225ff8d483c" method="PUT">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:wor="http://osb.npep.hnz.co.nz/assets/ContractorB2BWorkOrderInboundRS/workorder">wor:Response</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:element xmlns:wor="http://osb.npep.hnz.co.nz/assets/ContractorB2BWorkOrderInboundRS/workorder">wor:Fault</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="PUT Request" id="1353b73e-0ee3-4d2d-b91b-9bcc01e42156" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://osb.npep.hnz.co.nz</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

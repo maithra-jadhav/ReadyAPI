@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/assets/ContractorB2BWorkOrderInboundRS/workorder" path="/assets/ContractorB2BWorkOrderInboundRS/workorder" id="92d30c00-7f5f-43c2-a61e-1820a39da828" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="92d30c00-7f5f-43c2-a61e-1820a39da828fileName">%2Fassets%2FContractorB2BWorkOrderInboundRS%2Fworkorder</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="PUT" id="8b2038bb-316a-4302-8258-788f217d78ab" method="PUT">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element xmlns:err="http://www.bea.com/wli/sb/errors">err:RestError</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:wor="http://osb.npe4.hnz.co.nz/assets/ContractorB2BWorkOrderInboundRS/workorder">wor:Response</con:element>
+    </con:representation>
+    <con:request name="PUT Request" id="f9f9b098-e3dd-4907-a4b8-fce2344ba5f5" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://osb.npe4.hnz.co.nz</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

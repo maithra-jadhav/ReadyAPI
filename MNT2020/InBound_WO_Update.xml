@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="16171b36-aeb5-4799-a14a-26be21ba0ba1" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="InBound_WO_Update" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="16171b36-aeb5-4799-a14a-26be21ba0ba1fileName">InBound_WO_Update</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="properties" name="Properties" id="fd16d106-ecdf-48f0-bacb-7591424490f3">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>WorkOrderID</con:name>
+          <con:value>3506418</con:value>
+        </con:property>
+        <con:property>
+          <con:name>PropertyRefrence</con:name>
+          <con:value>HSS0020519</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Quantity</con:name>
+          <con:value>3</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="InBound_Wo_Update" id="8f7636e6-09b7-409b-99a4-c0f062d32569">
+    <con:settings/>
+    <con:config service="REST Service 4" resourcePath="/assets/ContractorB2BWorkOrderInboundRS/workorder" methodName="PUT" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="InBound_Wo_Update" id="f9f9b098-e3dd-4907-a4b8-fce2344ba5f5" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://osb.npe4.hnz.co.nz</con:endpoint>
+        <con:request>{
+    "WorkOrder": {
+    "WorkOrderHeader": {
+        "WorkOrderReference": "R${Properties#WorkOrderID}-1",
+        "WorkOrderUId": "2d333031343430343530313830313132",
+        "WorkOrderStatus": "Request Update",
+        "SentDateTime": "2019-12-16T14:21:31",
+        "Supplier": {
+            "SupplierSiteCode": "ECHB_PRTGE",
+            "Name": "PRESTIGE LIMITED"
+        },
+        "Property": {
+            "PropertyReference": "HSS0020258"           
+        },
+        "AdditionalInformation": {
+        "ReceiptDateTime": "2019-12-16T14:21:31",
+        "ResponseDateTime": "2019-12-16T14:21:31",
+        "CompletionDateTime": "2019-12-16T14:21:31"
+        }
+},
+"WorkOrderOperations": {
+    "WorkOrderOperation": [{
+        "OperationSequenceNumber": "1",
+        "ContractorReference": "ECHB_PRTGE",
+        "WorkOrderLines": {
+            "WorkOrderLine": [{
+                "LineNumber": "",
+                "ContractorLineNumber": "1",
+                "JobCode": "CAA100",
+                "Quantity": "${Properties#Quantity}",
+                "LocationCode": "UN",
+                "DamageFlag": "M"
+                }]                  
+            }
+        }]
+    }
+}
+}</con:request>
+        <con:originalUri>http://osb.npe4.hnz.co.nz/assets/ContractorB2BWorkOrderInboundRS/workorder</con:originalUri>
+        <con:assertion type="MessageContentAssertion" id="12a5c201-28cf-4136-84ef-1c8a4d1efefc" name="Message Content Assertion">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:elements>
+              <con:xpath>declare namespace ns1='http://osb.npe4.hnz.co.nz/assets/ContractorB2BWorkOrderInboundRS/workorder';
+//ns1:Response[1]/ns1:StandardResponse[1]</con:xpath>
+              <con:element>StandardResponse</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>SUCCESS</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:originalMessage>&lt;Response xmlns="http://osb.npe4.hnz.co.nz/assets/ContractorB2BWorkOrderInboundRS/workorder">
+   &lt;StandardResponse>SUCCESS&lt;/StandardResponse>
+&lt;/Response></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="jdbc" name="JDBC Request" id="bb782365-30d8-48eb-8f60-7ef037e0c723">
+    <con:settings>
+      <con:setting id="prettyPrintResponse">true</con:setting>
+    </con:settings>
+    <con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dbConnectionName>Kotahi</con:dbConnectionName>
+      <con:driver>oracle.jdbc.driver.OracleDriver</con:driver>
+      <con:connectionString>jdbc:oracle:thin:configuration/PASS_VALUE@exa-orb-scan.hnz.co.nz:1521:houtestc1</con:connectionString>
+      <con:password>password99</con:password>
+      <con:connectionProperties/>
+      <con:query>SELECT job_created_date AS created_date, jobs.* FROM JOBS WHERE JOB_WOV_WOR_SRQ_NO = ${Properties#WorkOrderID} ORDER BY job_created_date DESC</con:query>
+      <con:properties/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>fd16d106-ecdf-48f0-bacb-7591424490f3</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>
